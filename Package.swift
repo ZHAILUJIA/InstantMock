@@ -4,6 +4,11 @@ import PackageDescription
 
 let package = Package(
     name: "InstantMock",
+	products: [
+		.library(
+			name: "InstantMock",
+			targets: ["InstantMock"]),
+	],
 	targets: [
         .target(
             name: "InstantMock",
