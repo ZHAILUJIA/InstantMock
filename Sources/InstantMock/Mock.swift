@@ -280,14 +280,14 @@ extension Mock {
 
     /** Call with no return value */
     public func call(_ args: Any?..., function: String = #function) -> Void {
-        let ret: Void? = try? self.doCall(args, function: function)
+        let ret: Void? = try! self.doCall(args, function: function)
         return ret ?? ()
     }
 
 
     /** Call with return type object */
     public func call<T>(_ args: Any?..., function: String = #function) -> T? {
-        return try? self.doCall(args, function: function) as T?
+        return try! self.doCall(args, function: function) as T?
     }
 
 
